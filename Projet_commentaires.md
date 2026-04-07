@@ -71,7 +71,10 @@ Recherche des meilleurs paramètres (kernel, C, gamma pour les SVM).
 
 ## 7. Évaluation des performances
 
--Accuracy, F1-score, matrice de confusion  
+-Accuracy: elle mesure le taux de bonnes prédictions global.
+-Le F1-score: elle permet d'évaluer la performance du modèle sur chaque classe en tenant compte des erreurs.
+-La matrice de confusion: elle montre quelles classes sont bien ou mal prédites.
+
   
 
 ---
@@ -93,6 +96,16 @@ Des méthodes d’explicabilité (comme SHAP) sont utilisées afin de mieux comp
 La problématique centrale du projet peut être formulée ainsi :
 
 > *Dans quelle mesure les caractéristiques d’un vin permettent-elles d’expliquer puis de prédire sa qualité ?*
+
+# Résultat
+
+Les deux éléments les plus importants sont la quantité d’alcool (plus il y en a meilleure est la qualité) et l’acidité (plus elle est élevée, moins le vin est bon).
+
+D’autres éléments comme le sel ou le sucre  ont aussi un effet mais il est moins important.
+
+En revanche, le pH du vin n’ont presque pas d’impact sur la qualité.
+
+En résumé, certaines caractéristiques du vin permettent assez bien d’expliquer sa qualité, même si tout ne peut pas être parfaitement prédit, car d’autres éléments ont moins d’influence sur la qualité
 
 
 # Ce qui n'a pas marché
