@@ -112,9 +112,12 @@ En résumé, certaines caractéristiques du vin permettent assez bien d’expliq
 
 - Les différents modèles testés en classification initiale n’ont pas permis de prédire correctement la classe 0. En effet, les performances étaient très faibles sur cette classe, sûrement en raison d’un déséquilibre entre les observations.Face à cette difficulté, nous avons choisi de regrouper les modalités de la variable cible en deux catégories plus équilibrées (faible qualité vs bonne qualité). Cette transformation a permis d’améliorer significativement les performances des modèles et leur capacité de prédiction.
 
+---
 
-# Ce qui à réussi
+# Ce qui peut être amélioré
 
+-Gestion du déséquilibre — Tester des techniques comme le SMOTE (sur-échantillonnage synthétique) ou l'ajustement des class weights pour tenter de revenir à une classification ternaire plus fine, ce qui serait plus informatif qu'un simple binaire.
 
+-Comparaison de l'interprétabilité entre modèles — Appliquer les mêmes outils SHAP (beeswarm, waterfall, dependence plots) sur la régression logistique et le SVM afin de comparer si les mêmes variables ressortent comme importantes selon le modèle — cela renforcerait ou nuancerait les conclusions.
 
-
+-Interactions entre variables — Explorer les SHAP interaction values pour détecter des effets combinés (ex : alcool × acidité volatile), qui ne sont pas capturés par les PDP ou ICE univariés.
